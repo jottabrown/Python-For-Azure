@@ -41,8 +41,9 @@ print("-" * 80)
 
 for name, experiment in ws.experiments.items():
     if name in experimentos_desejados:
+        # Obter o último run (mais recente)
         last_run = next(experiment.get_runs(), None)  # Obtém o primeiro run (última execução)
-        
+
         last_run_time = "Nenhuma execução encontrada"
         run_id = "N/A"
         status = "Desconhecido"
