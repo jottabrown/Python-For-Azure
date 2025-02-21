@@ -1,7 +1,7 @@
 {
-  "subscription_id": "065c7b63-5be8-4a11-8c0f-254cca444c4e",
-  "resource_group": "RG-AICENTER-ESG-PRD",
-  "workspace_name": "AICenter_ESG",
+  "subscription_id": "SeuSubId",
+  "resource_group": "SeuRG",
+  "workspace_name": "SeuWorkspace",
   "location": "eastus2",
   "compute_target": "NA",
   "models": [
@@ -18,20 +18,14 @@
   },
   "application_insight": {
     "hanlder": true,
-    "application_version": "asset_health_conveyor_belt_vitoria",
+    "application_version": "seu-version",
     "user_id": "NA",
-    "inst_key": "ef0cf9d4-4ce3-45f0-9330-adaf4ff151a0"
+    "inst_key": "suaKey"
   },
 
     "experimentos":[
-        "eixo_retrain",
-        "ingest_dh_surveys",
-        "ingest_synapse_manifestations",
-        "ingest_synapse_surveys",
-        "remove_specific_manifestations",
-        "reset_datahub_ingestion",
-        "reset_survey_ingestion",
-        "reset_synapse_ingestion",
-        "run_models"
+        "experimento1",
+        "experimento2",
+        "experimento3"
     ]
 }
