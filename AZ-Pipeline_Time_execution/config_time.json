@@ -1,6 +1,6 @@
 {
-  "organization": "vale-devops",
-  "project": "AICenter",
+  "organization": "you organization in devops",
+  "project": "Your Project in devops",
   "pipeline_id": 123,
-  "personal_access_token": "BdsfWwynGUFkZzRyedworve22EySo5R4m6jpovyYYc7MJsPeFtpNJQQJ99BBACAAAAAjBr5fAAASAZDO4AtR"
+  "personal_access_token": "Your Token"
 }
