@@ -1,0 +1,17 @@
+# Usando uma imagem oficial do Python como base
+FROM python:3.9-slim
+
+# Definindo o diretório de trabalho no container
+WORKDIR /app
+
+# Copiando os arquivos do repositório para o diretório de trabalho
+COPY . /app
+
+# Instalando as dependências do projeto
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Expondo a porta (se necessário, por exemplo, se rodar um servidor dentro do container)
+EXPOSE 8000
+
+# Definindo o comando para rodar o script
+CMD ["python", "azure_pipeline_metrics.py"]
