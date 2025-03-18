@@ -1,0 +1,33 @@
+{
+  "subscription_id": "0ac189eb-cc05-44d0-98e8-b3551ebe323b",
+  "resource_group": "RG-AICENTER-MAINTENANCE-PRD",
+  "workspace_name": "AICenter_Maintenance",
+  "location": "eastus2",
+  "compute_target": "CC-AICENTER-MAINTENANCE-D13",
+
+  "models": [],
+
+  "image":{
+    "image_name":""
+
+
+  },
+
+  "azure_key_vault":{
+      "keys": [
+          "lakeprod",
+          "synprod",
+          "keyprod"
+      ]
+  },
+   
+  "tags": {
+    "pcm_ceos_guardian":null,
+    "metric": "accuracy",
+    "area": "<Vale Advanced Analytics>",
+    "type": "Rule-based algorithms and NLP similarity.",
+    "responsible": "douglas.pimenta@vale.com; eliane.rodrigues@vale.com",
+    "description": "NLP model for similarity and rule-based operation lists",
+    "important": "<Any importante >"
+  }
+}

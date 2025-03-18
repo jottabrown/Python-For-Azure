@@ -1,0 +1,15 @@
+{
+  "workspaces": [
+    {
+        "key_vault_name": "aicenterkv-dev"
+    },
+    {
+        "key_vault_name": "Sentinela-Vault"
+    }
+],
+  "destination_key_vault": "asset-health-kv",
+  "secrets": ["cnx-sp-aml-worskpace-sentinela","cnx-sp-pims-tubarao","cnx-sp-datalake-pims-tubarao","api-key-aicenter-email","api-key-aicenter-email-auth","cnx-str-mah-dbmanut-prd","cnx-sp-datalake-insight-mahsam",
+"cnx-str-datahub-mah","cnx-str-sentinela-sql-db-Sentinela-mah"]
+}
+
+ 
