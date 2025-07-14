@@ -55,7 +55,7 @@ databricks-token-generator/
 1. Clone este repositório:
 
 ```
-git clone https://github.com/seuusuario/databricks-token-generator.git
+git clone https://github.com/jottabrown/Python-For-Azure.git
 cd databricks-token-generator/app
 ```
 
@@ -112,7 +112,7 @@ Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICEN
 
 ## 📫 Contato
 
-Para dúvidas, sugestões ou contribuições, abra uma issue ou envie um e-mail para seu.email@dominio.com
+Para dúvidas, sugestões ou contribuições, abra uma issue ou envie um e-mail para jeancleber.alves@hotmail.com
 
 ---
 
