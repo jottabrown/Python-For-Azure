@@ -1,5 +1,12 @@
+"""
+Filename: token_parser.py
+Author: Jean Alves
+Created on: 2025-07-15
+Description: Utility functions for parsing access tokens from PowerShell script outputs
+             and handling token-related operations.
+"""
+
 import re
-import subprocess
 from typing import Optional
 
 
@@ -18,7 +25,3 @@ def extract_token_from_output(output: str) -> Optional[str]:
         return match.group(1).strip()
     return None
 
-def run_powershell_script(script_path, args):
-    cmd = ["powershell.exe", "-ExecutionPolicy", "Bypass", "-File", str(script_path)] + args
-    result = subprocess.run(cmd, capture_output=True, text=True, check=True)
-    return result.stdout

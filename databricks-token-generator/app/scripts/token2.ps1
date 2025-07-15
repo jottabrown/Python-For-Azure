@@ -45,3 +45,7 @@ catch {
     Write-Error "Erro na chamada REST: $_"
     exit 1
 }
+finally {
+    # Remove o arquivo de token por segurança
+    Remove-Item -Path $tokenPath -ErrorAction SilentlyContinue
+}

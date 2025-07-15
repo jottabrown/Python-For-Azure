@@ -1,8 +1,19 @@
+"""
+Filename: main.py
+Author: Jean Alves
+Created on: 2025-07-15
+Description:
+    Streamlit web application to generate Azure Databricks tokens using a Service Principal.
+    Executes PowerShell scripts for Azure authentication and token creation. Includes UI with
+    input fields and dynamic feedback. Designed for automation and secure token handling.
+"""
+
 import streamlit as st
 import streamlit.components.v1 as components
 from pathlib import Path
-from utils.token_parser import extract_token_from_output, run_powershell_script
-
+from utils.token_parser import extract_token_from_output
+from utils.powershell_runner import run_powershell_script
+from utils.azure_cli import get_sp_info_from_azure
 import subprocess
 
 logo_path = Path(__file__).parent / "ui" / "logo.png"
@@ -29,13 +40,14 @@ client_secret = st.text_input("Client Secret", type="password")
 scope = st.text_input("Scope", value="escope do sp/.default")
 
 databricksHost = st.text_input("Databricks Host", value="https://adb-xxxxxxx.azuredatabricks.net")
-application_id = st.text_input("Application ID")  # sem valor default para evitar confusão
+#application_id = st.text_input("Application ID")  # sem valor default para evitar confusão
 
 dias = st.text_input("Validade do token (dias)", value="90")
 comentario = st.text_input("Comentário do token", value="Token gerado")
 
 if st.button("🚀 Gerar Tokens"):
-    if not tenant_id or not client_id or not client_secret or not databricksHost or not application_id:
+    #if not tenant_id or not client_id or not client_secret or not databricksHost or not application_id:
+    if not tenant_id or not client_id or not client_secret or not databricksHost:
         st.error("❗ Por favor, preencha todos os campos obrigatórios.")
     else:
         try:
@@ -62,7 +74,7 @@ if st.button("🚀 Gerar Tokens"):
 
                 args_token2 = [
                     "-databricksHost", databricksHost,
-                    "-applicationId", application_id,
+                    "-applicationId", client_id,
                     "-dias", str(dias_int),
                     "-comentario", comentario
                 ]
