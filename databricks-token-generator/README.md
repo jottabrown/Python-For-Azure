@@ -34,6 +34,7 @@ databricks-token-generator/
 │   │   └── token2.ps1       # Script PowerShell para geração do token Databricks
 │   └── utils/
 │       ├── token_parser.py  # Funções utilitárias, regex para extrair token, execução dos scripts
+├── start.bat # Script para iniciar a aplicação no Windows
 ├── requirements.txt         # Dependências Python
 ├── README.md
 └── .gitignore
@@ -64,8 +65,8 @@ cd databricks-token-generator/app
 ```
 python -m venv venv
 source venv/bin/activate  # Linux/macOS
-venvScriptsActivate.ps1 # Windows PowerShell
-venvScriptsactivate.bat # Windows CMD
+.\venv\Scripts\Activate.ps1 # Windows PowerShell
+.\venv\Scripts\activate.bat # Windows CMD
 ```
 
 3. Instale as dependências:
@@ -77,7 +78,7 @@ pip install -r ../requirements.txt
 4. Execute a aplicação Streamlit:
 
 ```
-streamlit run main.py
+streamlit run main.py ou execute o start.bat
 ```
 
 5. Preencha os campos solicitados (Tenant ID, Client ID, Client Secret, etc.) e clique em **Gerar Tokens**.
