@@ -35,7 +35,7 @@ databricks-token-generator/
 │   └── utils/
 │       ├── token_parser.py  # Funções utilitárias, regex para extrair token, execução dos scripts
 |       ├── azure_cli.py     # funções que usam `az`, como buscar SP info
-├── powershell_runner.py# funções para rodar scripts PS via subprocess
+|       ├── powershell_runner.py# funções para rodar scripts PS via subprocess
 ├── start.bat # Script para iniciar a aplicação no Windows
 ├── requirements.txt         # Dependências Python
 ├── README.md
